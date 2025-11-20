@@ -1,0 +1,93 @@
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">About Sawla General Hospital</p>
+    <h1>Built around the health of our community.</h1>
+    <p>
+      Sawla General Hospital is a modern, patient-centred facility committed to delivering safe, affordable, and accessible
+      healthcare for families in the sawla Region and beyond.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div class="fade-in-up">
+      <h2>Our Mission</h2>
+      <p>
+        To provide compassionate, high-quality healthcare services that respond to the needs of our community, using modern
+        medical practices and a dedicated team of professionals.
+      </p>
+      <h2>Our Vision</h2>
+      <p>
+        To be the most trusted hospital in SNNP Region Ethiopia, recognised for clinical excellence, innovation, and exceptional
+        patient experience.
+      </p>
+    </div>
+    <div class="fade-in-up">
+      <div class="pill-grid">
+        <div class="pill-card">
+          <h3>Safety</h3>
+          <p>We maintain strict infection prevention protocols and continuous training for our staff.</p>
+        </div>
+        <div class="pill-card">
+          <h3>Respect</h3>
+          <p>We treat every patient with dignity, regardless of background, social status, or belief.</p>
+        </div>
+        <div class="pill-card">
+          <h3>Excellence</h3>
+          <p>We constantly improve our services, technologies, and skills to deliver better outcomes.</p>
+        </div>
+        <div class="pill-card">
+          <h3>Integrity</h3>
+          <p>We are transparent, accountable, and ethical in all our interactions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% if (news && news.length) { %>
+<section class="section">
+  <div class="container">
+    <header class="section-header fade-in-up">
+      <p class="eyebrow">Latest updates</p>
+      <h2>News & announcements.</h2>
+      <p>Stay informed about new services, community programs, and recognition received by Sawla General Hospital.</p>
+    </header>
+    <div class="news-grid">
+      <% news.forEach(function(item){ %>
+        <article class="card news-card fade-in-up">
+          <p class="news-date"><%= item.date %></p>
+          <h3><%= item.title %></h3>
+          <p><%= item.summary %></p>
+          <% if (item.link && item.link !== '#') { %>
+            <a href="<%= item.link %>" class="card-link">Read more</a>
+          <% } %>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-header fade-in-up">
+      <p class="eyebrow">Our team</p>
+      <h2>Specialists committed to your wellbeing.</h2>
+      <p>
+        Our doctors combine international-standard expertise with local understanding to deliver personalised care.
+      </p>
+    </header>
+    <div class="card-grid doctor-grid" id="doctorGrid">
+      <!-- Doctor cards injected dynamically from /api/doctors -->
+    </div>
+  </div>
+</section>
+
+
+<%- include('partials/footer') %>
+
+

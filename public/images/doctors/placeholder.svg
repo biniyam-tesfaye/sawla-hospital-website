@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2ff" />
+      <stop offset="100%" stop-color="#c7d2fe" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad)" />
+  <circle cx="200" cy="115" r="55" fill="#ffffff" opacity="0.9" />
+  <rect x="120" y="190" width="160" height="90" rx="45" fill="#ffffff" opacity="0.9" />
+  <path d="M170 210h60v12h-60z" fill="#94a3b8" opacity="0.8" />
+  <text x="200" y="275" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="18" fill="#1f2937" opacity="0.8">
+    Sawla Care Team
+  </text>
+</svg>
+
+
+

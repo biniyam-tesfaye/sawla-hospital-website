@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Biniyam tesfaye asaro",
+    "phone": "+251909666735",
+    "email": "biniyamtesfaye018@gmail.com",
+    "date": "2001-04-12",
+    "department": "Paediatrics",
+    "doctor": "Dr. Ama Serwaa",
+    "message": "i have back pain",
+    "createdAt": "2025-11-18T09:48:23.050Z"
+  },
+  {
+    "name": "nebiyu kostarika",
+    "phone": "0915234212",
+    "email": "benjamintesfaye13@gmail.com",
+    "date": "1998-05-04",
+    "department": "General Medicine",
+    "doctor": "Dr. Kofi Mensah",
+    "message": "i have epigastric pain",
+    "createdAt": "2025-11-18T10:27:13.061Z"
+  },
+  {
+    "name": "abenezer",
+    "phone": "0974187656",
+    "email": "biniyamtesfaye1993@gmail.com",
+    "date": "2018-03-13",
+    "department": "Emergency",
+    "doctor": "Dr. Bisrat",
+    "message": "back pain",
+    "createdAt": "2025-11-19T13:58:18.339Z"
+  }
+]

@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Admin Dashboard</p>
+    <h1>Appointment Requests</h1>
+    <p>Review all appointment requests submitted from the website.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="admin-dashboard-header">
+      <div>
+        <p class="eyebrow">Signed in as <%= adminUser || 'Admin' %></p>
+        <h2>Appointment Requests</h2>
+      </div>
+      <form action="/admin/logout" method="POST">
+        <button type="submit" class="btn-outline">Log out</button>
+      </form>
+    </div>
+
+    <% if (!appointments || appointments.length === 0) { %>
+      <p>No appointment requests found yet.</p>
+    <% } else { %>
+      <div class="card" style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Department</th>
+              <th>Doctor</th>
+              <th>Message</th>
+              <th>Submitted At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% appointments.forEach(function(appt, index) { %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= appt.name %></td>
+                <td><%= appt.phone %></td>
+                <td><%= appt.email || '-' %></td>
+                <td><%= appt.date %></td>
+                <td><%= appt.department %></td>
+                <td><%= appt.doctor || 'No preference' %></td>
+                <td><%= appt.message || '-' %></td>
+                <td><%= appt.createdAt || '' %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+
