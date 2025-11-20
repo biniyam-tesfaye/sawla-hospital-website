@@ -49,10 +49,15 @@ app.use((req, res) => {
     title: 'Page Not Found | Sawla General Hospital'
   });
 });
+// health check
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Sawla General Hospital website running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Sawla General Hospital website running on port ${PORT}`);
 });
+
 
 
